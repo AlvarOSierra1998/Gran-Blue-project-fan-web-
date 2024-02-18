@@ -1556,7 +1556,7 @@
                             <tbody class="table-hover">
                                 <tr>
                                     <td class="text-left">HP</td>
-                                    <td class="text-left">23</td>
+                                    <td class="text-left">27</td>
                                     <td class="text-left">100</td>
                                 </tr>
                                 <tr>
