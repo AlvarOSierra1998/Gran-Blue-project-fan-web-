@@ -1591,7 +1591,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import Katalina from '../assets/img/Katalina.png'
+
 
 
 
@@ -1651,8 +1651,7 @@ const alabardaOn = () => {
 
 //info katalina
 
-const Katalina = require('../assets/img/Katalina.png')
-import Katalina from '../assets/img/Katalina.png'
+
 const estadisticasInfoKatalina = ref(false);
 const statsKatalina = () => {
     estadisticasInfoKatalina.value = !estadisticasInfoKatalina.value
