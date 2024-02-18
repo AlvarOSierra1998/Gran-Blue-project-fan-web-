@@ -95,7 +95,7 @@
 
             </div>
             <div v-if="mostrarInfo" :class="{ vaseragaInfo: mostrarInfo }">
-                <img class="imgvas" src="../assets/img/vaseraga.png" alt="Vaseraga">
+                <img class="imgvas" src="../assets/vaseraga.png" alt="Vaseraga">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="vaseraga">Vaseraga</h2>
@@ -136,7 +136,7 @@
                                         contractor.
                                     </td>
                                     <td>
-                                        <img class="weapon" src="../assets/img/Grynoth.png" alt="Grynoth">
+                                        <img class="weapon" src="../assets/Grynoth.png" alt="Grynoth">
                                     </td>
                                 </tr>
                                 <tr>
@@ -183,7 +183,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoV" :class="{ VaneInfo: mostrarInfoV }">
-                <img class="imgvas" src="../assets/img/Vane.png" alt="Vane">
+                <img class="imgvas" src="../assets/Vane.png" alt="Vane">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="vane">Vane</h2>
@@ -223,7 +223,7 @@
                                         front lines and letting them know they'll never be alone.
                                     </td>
                                     <td>
-                                        <img class="weapon" src="../assets/img/alabarda.png" alt="Alabarda">
+                                        <img class="weapon" src="../assets/alabarda.png" alt="Alabarda">
                                     </td>
                                 </tr>
                                 <tr>
@@ -267,7 +267,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoKatalina" :class="{ KataInfo: mostrarInfoKatalina }">
-                <img class="imgvas" src="../../dist/assets/katalina-yUlXuaT_.png" alt="Katalina">
+                <img class="imgvas" src="../assets/Katalina.png" alt="Katalina">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="katalina">KATALINA</h2>
@@ -306,7 +306,7 @@
                                         allies.
                                     </td>
                                     <td>
-                                        <img class="weapon" src="../assets/img/rukalsa.png" alt="Estoque Rukalsa">
+                                        <img class="weapon" src="../assets/rukalsa.png" alt="Estoque Rukalsa">
                                     </td>
                                 </tr>
                                 <tr>
@@ -350,7 +350,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoPercival" :class="{ PercivalInfo: mostrarInfoPercival }">
-                <img class="imgvas" src="../assets/img/Percival.png" alt="Percival">
+                <img class="imgvas" src="../assets/Percival.png" alt="Percival">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="percival">PERCIVAL</h2>
@@ -388,7 +388,7 @@
                                         advances, ever closer to the world of his dreams.
                                     </td>
                                     <td>
-                                        <img class="weapon" src="../assets/img/percivalWeapon.png" alt="Weapon_percival">
+                                        <img class="weapon" src="../assets/percivalWeapon.png" alt="Weapon_percival">
                                     </td>
                                 </tr>
                                 <tr>
@@ -431,7 +431,7 @@
         <!--lista perosnajes-->
         <div>
             <div v-if="mostrarInfoIo" :class="{ IoInfo: mostrarInfoIo }">
-                <img class="imgvas" src="../assets/img/Io.png" alt="Io">
+                <img class="imgvas" src="../assets/Io.png" alt="Io">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="io">Io</h2>
@@ -468,7 +468,7 @@
                                         knees, proof that she commanded magic which far outsripped her peers
                                     </td>
                                     <td>
-                                        <img class="weapon" src="../assets/img/ioWeapon.png" alt="Weapon_io">
+                                        <img class="weapon" src="../assets/ioWeapon.png" alt="Weapon_io">
                                     </td>
                                 </tr>
                                 <tr>
@@ -513,7 +513,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoYodarha" :class="{ YodarhaInfo: mostrarInfoYodarha }">
-                <img class="imgvas" src="../assets/img/Yodarha.png" alt="Yodarha">
+                <img class="imgvas" src="../assets/Yodarha.png" alt="Yodarha">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="yodarha">Yodarha</h2>
@@ -554,7 +554,7 @@
                                         under whose shade they will never sit.
                                     </td>
                                     <td>
-                                        <img class="weapon" src="../assets/img/Katana.png" alt="Weapon_io">
+                                        <img class="weapon" src="../assets/Katana.png" alt="Weapon_io">
                                     </td>
                                 </tr>
                                 <tr>
@@ -599,7 +599,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoRackam" :class="{ RackamInfo: mostrarInfoRackam }">
-                <img class="imgvas" src="../assets/img/Rackam.png" alt="Rackam">
+                <img class="imgvas" src="../assets/Rackam.png" alt="Rackam">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="rackam">Rackam</h2>
@@ -640,7 +640,7 @@
                                         skyfarer and skyfarer.
                                     </td>
                                     <td>
-                                        <img class="weapon" src="../assets/img/rackamweapon.png" alt="Weapon_Rackam">
+                                        <img class="weapon" src="../assets/rackamweapon.png" alt="Weapon_Rackam">
                                     </td>
                                 </tr>
                                 <tr>
@@ -687,7 +687,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoEugen" :class="{ RackamInfo: mostrarInfoEugen }">
-                <img class="imgvas" src="../assets/img/eugen.png" alt="Eugen">
+                <img class="imgvas" src="../assets/eugen.png" alt="Eugen">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="eugen">Eugen</h2>
@@ -725,7 +725,7 @@
 
                                     </td>
                                     <td>
-                                        <img class="weapon" src="../assets/img/rackamweapon.png" alt="Weapon_Rackam">
+                                        <img class="weapon" src="../assets/rackamweapon.png" alt="Weapon_Rackam">
                                     </td>
                                 </tr>
                                 <tr>
@@ -772,7 +772,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoRosetta" :class="{ RosettaInfo: mostrarInfoRosetta }">
-                <img class="imgvas" src="../assets/img/Rosetta.png" alt="Rosetta">
+                <img class="imgvas" src="../assets/Rosetta.png" alt="Rosetta">
 
                 <blockquote class="txtVa">
                     <p>
@@ -817,7 +817,7 @@
                                     </td>
                                     <!---AÑADIR FOTO-->
                                     <td>
-                                        <img class="weapon" src="../assets/img/rosettaWeapon.png" alt="Weapon_Rosetta">
+                                        <img class="weapon" src="../assets/rosettaWeapon.png" alt="Weapon_Rosetta">
                                     </td>
                                 </tr>
                                 <tr>
@@ -865,7 +865,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoLancelot" :class="{ LancelotInfo: mostrarInfoLancelot }">
-                <img class="imgvas" src="../assets/img/lancelot.png" alt="lancelot">
+                <img class="imgvas" src="../assets/lancelot.png" alt="lancelot">
 
                 <blockquote class="txtVa">
                     <p>
@@ -905,7 +905,7 @@
                                     </td>
                                     <!---AÑADIR FOTO-->
                                     <td>
-                                        <img class="weapon" src="../assets/img/lancelotWeapon.png" alt="Weapon_Lancelot">
+                                        <img class="weapon" src="../assets/lancelotWeapon.png" alt="Weapon_Lancelot">
                                     </td>
                                 </tr>
                                 <tr>
@@ -955,7 +955,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoSiegfried" :class="{ SiegfriedInfo: mostrarInfoSiegfried }">
-                <img class="imgvas" src="../assets/img/siegfried.png" alt="Siegfried">
+                <img class="imgvas" src="../assets/siegfried.png" alt="Siegfried">
 
                 <blockquote class="txtVa">
                     <p>
@@ -997,7 +997,7 @@
                                     </td>
                                     <!---AÑADIR FOTO-->
                                     <td>
-                                        <img class="weapon" src="../assets/img/siegfriedWeapon.png" alt="Weapon_Siegfried">
+                                        <img class="weapon" src="../assets/siegfriedWeapon.png" alt="Weapon_Siegfried">
                                     </td>
                                 </tr>
                                 <tr>
@@ -1044,7 +1044,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoCharlotta" :class="{ CharlottaInfo: mostrarInfoCharlotta }">
-                <img class="imgvas" src="../assets/img/charlotta.png" alt="Charlotta">
+                <img class="imgvas" src="../assets/charlotta.png" alt="Charlotta">
 
                 <blockquote class="txtVa">
                     <p>
@@ -1086,7 +1086,7 @@
                                     </td>
                                     <!---AÑADIR FOTO-->
                                     <td>
-                                        <img class="weapon" src="../assets/img/charlottaWeapon.png" alt="Weapon_Charlotta">
+                                        <img class="weapon" src="../assets/charlottaWeapon.png" alt="Weapon_Charlotta">
                                     </td>
                                 </tr>
                                 <tr>
@@ -1134,7 +1134,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoNarmaya" :class="{ NarmayaInfo: mostrarInfoNarmaya }">
-                <img class="imgvas" src="../assets/img/narmaya.png" alt="Narmaya">
+                <img class="imgvas" src="../assets/narmaya.png" alt="Narmaya">
 
                 <blockquote class="txtVa">
                     <p>
@@ -1178,7 +1178,7 @@
                                     </td>
                                     <!---AÑADIR FOTO-->
                                     <td>
-                                        <img class="weapon" src="../assets/img/narmayaWeapon.png" alt="Weapon_Narmaya">
+                                        <img class="weapon" src="../assets/narmayaWeapon.png" alt="Weapon_Narmaya">
                                     </td>
                                 </tr>
                                 <tr>
@@ -1226,7 +1226,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoZeta" :class="{ ZetaInfo: mostrarInfoZeta }">
-                <img class="imgvas" src="../assets/img/zeta.png" alt="Zeta">
+                <img class="imgvas" src="../assets/zeta.png" alt="Zeta">
 
                 <blockquote class="txtVa">
                     <p>
@@ -1275,7 +1275,7 @@
                                     </td>
                                     <!---AÑADIR FOTO-->
                                     <td>
-                                        <img class="weapon" src="../assets/img/zetaWeapon.png" alt="Weapon_Zeta">
+                                        <img class="weapon" src="../assets/zetaWeapon.png" alt="Weapon_Zeta">
                                     </td>
                                 </tr>
                                 <tr>
@@ -1323,7 +1323,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoFerry" :class="{ FerryInfo: mostrarInfoFerry }">
-                <img class="imgvas" src="../assets/img/ferry.png" alt="Ferry">
+                <img class="imgvas" src="../assets/ferry.png" alt="Ferry">
 
                 <blockquote class="txtVa">
                     <p>
@@ -1364,7 +1364,7 @@
                                     </td>
                                     <!---AÑADIR FOTO-->
                                     <td>
-                                        <img class="weapon" src="../assets/img/ferryWeapon.png" alt="Weapon_Ferry">
+                                        <img class="weapon" src="../assets/ferryWeapon.png" alt="Weapon_Ferry">
                                     </td>
                                 </tr>
                                 <tr>
@@ -1412,7 +1412,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoGhandagoza" :class="{ GhandagozaInfo: mostrarInfoGhandagoza }">
-                <img class="imgvas" src="../assets/img/ghandagoza.png" alt="Ghandagoza">
+                <img class="imgvas" src="../assets/ghandagoza.png" alt="Ghandagoza">
 
                 <blockquote class="txtVa">
                     <p>
@@ -1454,7 +1454,7 @@
                                     </td>
                                     <!---AÑADIR FOTO-->
                                     <td>
-                                        <img class="weapon" src="../assets/img/ghandagozaWeapon.png"
+                                        <img class="weapon" src="../assets/ghandagozaWeapon.png"
                                             alt="Weapon_Ghandagoza">
                                     </td>
                                 </tr>
@@ -1503,7 +1503,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoCagliostro" :class="{ CagliostroInfo: mostrarInfoCagliostro }">
-                <img class="imgvas" src="../assets/img/cagliostro.png" alt="Cagliostro">
+                <img class="imgvas" src="../assets/cagliostro.png" alt="Cagliostro">
 
                 <blockquote class="txtVa">
                     <p>
@@ -1543,7 +1543,7 @@
                                     </td>
                                     <!---AÑADIR FOTO-->
                                     <td>
-                                        <img class="weapon" src="../assets/img/cagliostroWeapon.png"
+                                        <img class="weapon" src="../assets/cagliostroWeapon.png"
                                             alt="Weapon_Cagliostro">
                                     </td>
                                 </tr>

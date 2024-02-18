@@ -3,7 +3,7 @@
     <main>
       <section class="gradiante">
         <div class="foto">
-          <img class="animate__animated animate__fadeIn" src="./assets/img/Gbf_relink_logo-HD.png" alt="Imagen">
+          <img class="animate__animated animate__fadeIn" src="./assets/Gbf_relink_logo-HD.png" alt="Imagen">
         </div>
         <div style="overflow: hidden;">
           <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@
               <span class="tooltiptextLinkedin">Linkedin</span>
               <a href="https://twitter.com/GBF_RL_EN" target="_blank" rel="noopener noreferrer">
                 <img class="linkedin"
-                  src="./assets/img/linkedin.png"
+                  src="./assets/linkedin.png"
                   title="Linkedin" alt="Linkedin">
               </a>
             </li>

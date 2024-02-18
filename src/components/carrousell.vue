@@ -16,11 +16,11 @@
 import { ref } from 'vue';
 
 const images = [
-    new URL('../assets/img/fondo1.jpg', import.meta.url),
-    new URL('../assets/img/fondo2.jpg', import.meta.url),
-    new URL('../assets/img/fondo4.jpg', import.meta.url),
-    new URL('../assets/img/fondo5.jpeg', import.meta.url),
-    new URL('../assets/img/fondo6.jpeg', import.meta.url),
+    new URL('../assets/fondo1.jpg', import.meta.url),
+    new URL('../assets/fondo2.jpg', import.meta.url),
+    new URL('../assets/fondo4.jpg', import.meta.url),
+    new URL('../assets/fondo5.jpeg', import.meta.url),
+    new URL('../assets/fondo6.jpeg', import.meta.url),
     // Add more image paths as needed
 ];
 
