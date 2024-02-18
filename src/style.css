@@ -1,0 +1,430 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:lighter;
+  font-style: normal;
+  overflow-x: hidden;
+  cursor: url('./assets/img/cursor.png'), auto;
+}
+
+/*nav{
+  background-color: black;
+  color: aliceblue;
+  width: 100%;
+  
+}*/
+.foto {
+  width: 1366px;
+  height: 768px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+
+.foto>img {
+  width: 100%;
+}
+
+.txtVa {
+  width: 50%;
+  margin: auto;
+  font-size: 1.9em;
+}
+
+.botones {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1;
+  margin: auto;
+  
+}
+.botones {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  z-index: 1;
+  margin: auto;
+  width: 100%;
+  flex-wrap: wrap;
+
+
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #f1f1f11f;
+  padding: 50px 0;
+  font-size: 20px;
+  z-index: 1;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
+
+  box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+
+}
+a{
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5em;
+  font-weight: lighter;
+  font-style: normal;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+a:hover{
+  color: #fcfcfc;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  
+  
+
+}
+b{
+  transition: all 0.3s ease;
+}
+b:hover{
+  padding: 0.5em;
+  background: linear-gradient(270deg, #1fdfec, #c205053d, #7895d1, #268f8f);
+  border-radius: 10px;
+  width: 50%;
+  background-size: 800% 800%;
+  -webkit-animation: FondoGradianteButtons 12s ease infinite;
+  -moz-animation: FondoGradianteButtons 12s ease infinite;
+  -o-animation: FondoGradianteButtons 12s ease infinite;
+  animation: FondoGradianteButtons 12s ease infinite;
+  box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+
+}
+@-webkit-keyframes FondoGradianteButtons {
+  0% {
+    background-position: 51% 0%
+  }
+
+  50% {
+    background-position: 50% 100%
+  }
+
+  100% {
+    background-position: 51% 0%
+  }
+}
+
+@-moz-keyframes FondoGradianteButtons {
+  0% {
+    background-position: 51% 0%
+  }
+
+  50% {
+    background-position: 50% 100%
+  }
+
+  100% {
+    background-position: 51% 0%
+  }
+}
+
+@-o-keyframes FondoGradianteButtons {
+  0% {
+    background-position: 51% 0%
+  }
+
+  50% {
+    background-position: 50% 100%
+  }
+
+  100% {
+    background-position: 51% 0%
+  }
+}
+
+@keyframes FondoGradianteButtons {
+  0% {
+    background-position: 51% 0%
+  }
+
+  50% {
+    background-position: 50% 100%
+  }
+
+  100% {
+    background-position: 51% 0%
+  }
+}
+
+
+em,small{
+  text-align: center;
+  display: block;
+  font-size: 20px;
+}
+
+
+
+
+
+.grynoth {
+  width: 200%;
+  margin: auto;
+  display: flex;
+  border-radius: 20%;
+
+
+  
+}
+.tdinfoV{
+  width: 50%;
+}
+h2{
+  text-align: center;
+  font-weight: lighter;
+  font-size: 2em;
+}
+h1{
+  text-align: center;
+  font-weight: lighter;
+  font-size:4em;
+}
+
+
+
+.tdsVase {
+  text-align: right;
+}
+
+div.table-title {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  padding: 5px;
+  width: 100%;
+}
+
+.table-title h3 {
+  color: #fafafa;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius: 3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding: 5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+  
+}
+
+th {
+  color: #D5DDE5;
+  background: #1b1e24;
+  border-bottom: 4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size: 23px;
+  font-weight: 100;
+  padding: 24px;
+  text-align: left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+}
+
+th:first-child {
+  border-top-left-radius: 3px;
+}
+
+th:last-child {
+  border-top-right-radius: 3px;
+  border-right: none;
+}
+
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color: #666B85;
+  font-size: 16px;
+  font-weight: normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+
+
+tr:first-child {
+  border-top: none;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+
+
+
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 3px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 3px;
+}
+
+td {
+  background: #FFFFFF;
+  padding: 20px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+.container-elements{
+  display: flex;
+}
+
+/*.brd-img{
+  border-image: fill 0 linear-gradient(#0003, #0000);
+}*/
+.gradiante {
+  height: 1400px;
+  background: linear-gradient(219deg, #76d6db, #ffffff, #e3e2f2);
+  background-size: 600% 600%;
+
+  -webkit-animation: FondoGradiante 9s ease infinite;
+  -moz-animation: FondoGradiante 9s ease infinite;
+  -o-animation: FondoGradiante 9s ease infinite;
+  animation: FondoGradiante 9s ease infinite;
+}
+
+@-webkit-keyframes FondoGradiante {
+  0% {
+    background-position: 51% 0%
+  }
+
+  50% {
+    background-position: 50% 100%
+  }
+
+  100% {
+    background-position: 51% 0%
+  }
+}
+
+@-moz-keyframes FondoGradiante {
+  0% {
+    background-position: 51% 0%
+  }
+
+  50% {
+    background-position: 50% 100%
+  }
+
+  100% {
+    background-position: 51% 0%
+  }
+}
+
+@-o-keyframes FondoGradiante {
+  0% {
+    background-position: 51% 0%
+  }
+
+  50% {
+    background-position: 50% 100%
+  }
+
+  100% {
+    background-position: 51% 0%
+  }
+}
+
+@keyframes FondoGradiante {
+  0% {
+    background-position: 51% 0%
+  }
+
+  50% {
+    background-position: 50% 100%
+  }
+
+  100% {
+    background-position: 51% 0%
+  }
+}
+
+
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 6s;
+  
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
