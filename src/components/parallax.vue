@@ -29,12 +29,8 @@
                     with their own unique enemies and challenges. The game will also feature a variety of different
                     weapons
                     and
-                    equipment, which players will be able to use to customize their characters and playstyles. The game
-                    will
-                    also
-                    feature a variety of different enemies, each with their own unique abilities and attacks. The game
-                    will
-                    also
+                    equipment, which players will be able to use to customize their characters and playstyles.
+                   
                 </p>
 
 
