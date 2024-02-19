@@ -350,7 +350,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoPercival" :class="{ PercivalInfo: mostrarInfoPercival }">
-                <img class="imgvas" src="../assets/Percival.png" alt="Percival">
+                <img class="imgvas" src="../assets/percival.png" alt="Percival">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="percival">PERCIVAL</h2>
@@ -370,7 +370,7 @@
                         <li>ATK(lvl 100): <b class="values-percival"> 70000 </b> </li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png"
-                                alt="percoval_Percival"></li>
+                                alt="element_Percival"></li>
                     </ul>
                     <!---WEAPON-->
                     <button class="button-stats" @click="espadaOn">Weapon</button>
@@ -431,7 +431,7 @@
         <!--lista perosnajes-->
         <div>
             <div v-if="mostrarInfoIo" :class="{ IoInfo: mostrarInfoIo }">
-                <img class="imgvas" src="../assets/Io.png" alt="Io">
+                <img class="imgvas" src="../assets/io.png" alt="Io">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="io">Io</h2>
@@ -513,7 +513,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoYodarha" :class="{ YodarhaInfo: mostrarInfoYodarha }">
-                <img class="imgvas" src="../assets/Yodarha.png" alt="Yodarha">
+                <img class="imgvas" src="../assets/yodarha.png" alt="Yodarha">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="yodarha">Yodarha</h2>
@@ -599,7 +599,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoRackam" :class="{ RackamInfo: mostrarInfoRackam }">
-                <img class="imgvas" src="../assets/Rackam.png" alt="Rackam">
+                <img class="imgvas" src="../assets/rackam.png" alt="Rackam">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="rackam">Rackam</h2>
@@ -772,7 +772,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoRosetta" :class="{ RosettaInfo: mostrarInfoRosetta }">
-                <img class="imgvas" src="../assets/Rosetta.png" alt="Rosetta">
+                <img class="imgvas" src="../assets/rosetta.png" alt="Rosetta">
 
                 <blockquote class="txtVa">
                     <p>
@@ -1158,7 +1158,7 @@
                         <li>ATK(lvl 100 ):<b class="values-Narmaya"> 88888 </b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/dark-element-icon-granblue-fantasy-relink-wiki-guide.png"
-                                alt="elemtn_narmaya"> </li>
+                                alt="elemnt_narmaya"> </li>
                     </ul>
                     <!---WEAPON-->
                     <button class="button-weapon" @click="katanaOn">Weapon</button>
@@ -1226,7 +1226,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoZeta" :class="{ ZetaInfo: mostrarInfoZeta }">
-                <img class="imgvas" src="../assets/zeta.png" alt="Zeta">
+                <img class="imgvas" src="../assets/ZETA.png" alt="Zeta">
 
                 <blockquote class="txtVa">
                     <p>
@@ -1323,7 +1323,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoFerry" :class="{ FerryInfo: mostrarInfoFerry }">
-                <img class="imgvas" src="../assets/ferry.png" alt="Ferry">
+                <img class="imgvas" src="../assets/Ferry.png" alt="Ferry">
 
                 <blockquote class="txtVa">
                     <p>
