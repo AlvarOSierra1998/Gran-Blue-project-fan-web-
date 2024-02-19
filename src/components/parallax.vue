@@ -24,8 +24,6 @@
                     The game will also feature a story mode, which will allow players
                     to experience the game's story and lore.
                     The game will also feature a variety of different environments,
-                </p>
-                <p>
                     with their own unique enemies and challenges. The game will also feature a variety of different
                     weapons
                     and
