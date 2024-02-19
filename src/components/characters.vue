@@ -817,7 +817,7 @@
                                     </td>
                                     <!---AÑADIR FOTO-->
                                     <td>
-                                        <img class="weapon" src="../assets/rosettaWeapon.png" alt="Weapon_Rosetta">
+                                        <img class="weapon" src="../assets/RosettaWeapon.png" alt="Weapon_Rosetta">
                                     </td>
                                 </tr>
                                 <tr>
