@@ -267,7 +267,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoKatalina" :class="{ KataInfo: mostrarInfoKatalina }">
-                <img class="imgvas" src="../assets/Katalina.png" alt="Katalina">
+                <img class="imgvas" src="../assets/katalina.png" alt="Katalina">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="katalina">KATALINA</h2>
