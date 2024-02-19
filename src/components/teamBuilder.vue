@@ -7,7 +7,7 @@
                     <h4>Team Builder</h4>
                 </label>
                 <input v-model="productName" @keyup.enter="searchProduct" id="productName"
-                    placeholder="Type the name of the character to add to your team!" />
+                    placeholder="Type the name of the character to add to your team! then press intro! :3" />
 
 
 
@@ -37,7 +37,7 @@
                     </div>
                     <div class="conatiner-button-delete">
                         <button class="button-delete" @click="Eliminar(index)">Delete</button>
-                        <button class="button-clear" @click="clearResults">Limpiar Resultados</button>
+                        <button class="button-clear" @click="clearResults">Clear Results</button>
                     </div>
 
                 </div>
