@@ -1,5 +1,5 @@
 <template>
-    <div class="parallax" :style="{ opacity: opacityValue }">
+    <div class="parallax" ref="root" :style="{ opacity: opacityValue }">
         <div>
             <img src="https://gbf.wiki/images/7/72/Npc_zoom_3050001000_01.png" alt="Vyrn">
             <carrousel />
@@ -28,7 +28,7 @@
                     weapons
                     and
                     equipment, which players will be able to use to customize their characters and playstyles.
-                   
+
                 </p>
 
 
@@ -41,16 +41,18 @@
         <h2>グランブルーファンタジー リリンク</h2>
     </div>
 </template>
-  
+
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 import carrousel from './carrousell.vue';
 
 const opacityValue = ref(0);
+const root = ref(null);
 
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
 });
 
 onBeforeUnmount(() => {
@@ -58,84 +60,102 @@ onBeforeUnmount(() => {
 });
 
 function handleScroll() {
-    opacityValue.value = window.scrollY / 1000;
+    if (!root.value) return;
+    const top = root.value.getBoundingClientRect().top;
+    const vh = window.innerHeight;
+    // 0 cuando el bloque aún no entra en pantalla, 1 cuando ya se ha asomado un 60% de la altura
+    opacityValue.value = Math.min(1, Math.max(0, (vh - top) / (vh * 0.6)));
 }
 </script>
 <style scoped>
-@media screen and (min-width: 2000px) {
-    .parallax {
-        background-image: url("https://static.actugaming.net/media/2023/08/granblue-fantasy-relink-screenshot-22-08-202301.jpg");
-        height: 1300px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-image: fill 0 linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        transition: opacity 1s ease-in-out;
+/* ---------- Escritorio (base) ---------- */
+.parallax {
+    background-image: url("https://static.actugaming.net/media/2023/08/granblue-fantasy-relink-screenshot-22-08-202301.jpg");
+    height: 1300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-image: fill 0 linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.parallax div {
+    padding: 1rem;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin: auto;
+    display: inline-flex;
+}
+
+.parallax img {
+    transition: transform 0.5s;
+    animation: slide 5s ease-in-out infinite;
+    animation-delay: 2s;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 90%;
+    width: 15%;
+    height: 20%;
+}
+
+@keyframes slide {
+
+    0%,
+    100% {
+        top: 0;
     }
 
+    50% {
+        top: 10%;
+    }
+}
+
+.parallax p {
+    font-size: 1.4rem;
+    border-radius: 10px;
+    color: black;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.507);
+    padding: 2rem;
+    box-shadow: 2px 30px 40px #000000;
+    transition: 0.5s ease-in-out;
+    height: 200px;
+}
+
+.parallax h2 {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px #000000;
+    font-style: italic;
+    position: relative;
+    top: 30%;
+    left: -76%;
+    width: 80%;
+}
+
+.parallax p:hover {
+    background-color: rgba(0, 0, 0, 0.507);
+    padding: 3rem;
+    color: wheat;
+    box-shadow: 2px 30px 40px #000000;
+    transition: 0.5s;
+}
+
+/* ---------- Pantallas muy grandes ---------- */
+@media screen and (min-width: 2000px) {
     .parallax div {
         padding: 5rem;
-        text-align: center;
-        font-size: 20px;
-        color: white;
-        margin: auto;
-        display: inline-flex;
-
-    }
-
-    .parallax img {
-        transition: transform 0.5s;
-        position: relative;
-        animation: slide 5s ease-in-out infinite;
-        animation-delay: 2s;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        left: 90%;
-        width: 15%;
-        height: 20%;
-
-    }
-
-    @keyframes slide {
-
-        0%,
-        100% {
-            top: 0;
-        }
-
-        50% {
-            top: 10%;
-        }
-    }
-
-    .parallax {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .parallax p {
-        font-size: 1.7rem;
-        border-radius: 10px;
-        color: black;
-        text-shadow: 2px 2px 4px #000000;
-        font-weight: bolder;
-        background-color: rgba(255, 255, 255, 0.507);
-        padding: 3rem;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s ease-in-out;
-
-
-
-
     }
 
     .parallax h2 {
         display: none;
-
     }
 
     .parallax h1 {
@@ -145,453 +165,99 @@ function handleScroll() {
     }
 
     hr {
-        height: 300px
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1978px) {
+    .parallax p {
+        background-color: rgba(206, 179, 179, 0.507);
+    }
+}
+
+/* ---------- Portátil pequeño / tablet: layout en columna ---------- */
+@media screen and (max-width: 1186px) {
+    .parallax {
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+        padding: 2rem 0;
+        box-sizing: border-box;
     }
 
+    .parallax div {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+
+    .parallax blockquote {
+        margin: 0;
+        width: 100%;
+    }
+
+    .parallax p {
+        width: 100%;
+        height: auto;
+        margin: 0 0 1rem 0;
+        font-size: 1.1rem;
+        padding: 1.2rem;
+        box-sizing: border-box;
+    }
 
     .parallax p:hover {
-        background-color: rgba(0, 0, 0, 0.507);
-        color: wheat;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s;
+        padding: 1.2rem;
     }
 
-
-}
-
-/**MOvil */
-@media screen and (max-width:768px) {
-    .parallax {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .parallax h1 {
+        font-size: 2.5rem;
     }
 
-    .parallax p {
-        width: 10%;
-        height: 40px;
-        font-size: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-
-
+    .parallax h2 {
+        position: static;
+        width: auto;
+        font-size: 1.6rem;
+        padding: 0 1rem;
     }
 
-}
-
-/*tablet*/
-@media screen and (max-width: 992px) {
-    .parallax {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 5rem;
-        font-size: 0.2rem;
-
-
-    }
-
-    .parallax p {
-        width: 160%;
-        height: 236px;
-        font-size: 0.8rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        Position: relative;
-        left: -47%;
-
-    }
-
-    h2 {
-        font-size: 11rem;
-        position: relative;
-        left: 65%;
-    }
-
-    h1 {
-        font-size: 2.3rem;
-        position: relative;
-        top: -10%
+    .parallax img {
+        left: auto;
+        top: auto;
+        width: 90px;
+        height: auto;
+        animation: none;
+        pointer-events: none;
     }
 
     hr {
-        display: none
+        display: none;
     }
-
-
-
 }
 
-/*Pantalla 1080*/
-@media screen and (max-width: 1920px) and (max-height: 1080px) {
-
+/* ---------- Móvil ---------- */
+@media screen and (max-width: 768px) {
     .parallax {
-        background-image: url("https://static.actugaming.net/media/2023/08/granblue-fantasy-relink-screenshot-22-08-202301.jpg");
-        height: 1300px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-image: fill 0 linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        transition: opacity 1s ease-in-out;
-
+        background-attachment: scroll;
     }
 
-    .parallax div {
+    .parallax p {
+        font-size: 0.95rem;
         padding: 1rem;
-        text-align: center;
-        font-size: 20px;
-        color: white;
-        margin: auto;
-        display: inline-flex;
+    }
+
+    .parallax h1 {
+        font-size: 2rem;
+    }
+
+    .parallax h2 {
+        font-size: 1.3rem;
     }
 
     .parallax img {
-        transition: transform 0.5s;
-        position: relative;
-        animation: slide 5s ease-in-out infinite;
-        animation-delay: 2s;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        left: 90%;
-        width: 15%;
-        height: 20%;
-
-    }
-
-    @keyframes slide {
-
-        0%,
-        100% {
-            top: 0;
-        }
-
-        50% {
-            top: 10%;
-        }
-    }
-
-    .parallax {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .parallax p {
-        font-size: 1.7rem;
-        border-radius: 10px;
-        color: black;
-        text-shadow: 2px 2px 4px #000000;
-        font-weight: bolder;
-        background-color: rgba(255, 255, 255, 0.507);
-        padding: 2rem;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s ease-in-out;
-
-
-    }
-
-    .parallax h2 {
-        font-size: 2rem;
-        color: rgb(0, 0, 0);
-        text-shadow: 2px 2px 4px #000000;
-        font-style: italic;
-        position: relative;
-        top: 30%;
-        left: -76%;
-        width: 80%;
-
-    }
-
-
-    .parallax p:hover {
-        background-color: rgba(0, 0, 0, 0.507);
-        padding: 3rem;
-        color: wheat;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s;
-    }
-
-
-}
-
-@media screen and (min-width: 2082px) {
-    .parallax {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .parallax p {
-        font-size: 1.4rem;
-        border-radius: 10px;
-        color: black;
-        text-shadow: 2px 2px 4px #000000;
-        font-weight: bolder;
-        background-color: rgba(255, 255, 255, 0.507);
-        padding: 2rem;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s ease-in-out;
-        height: 200px;
-
-    }
-
-    .parallax h2 {
-        font-size: 2rem;
-        color: rgb(0, 0, 0);
-        text-shadow: 2px 2px 4px #000000;
-        font-style: italic;
-        position: relative;
-        top: 30%;
-        left: -76%;
-        width: 80%;
-
-    }
-
-
-    .parallax p:hover {
-        background-color: rgba(0, 0, 0, 0.507);
-        padding: 3rem;
-        color: wheat;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s;
-    }
-}
-
-@media screen and (max-width: 2078px) {
-    .parallax {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .parallax p {
-        font-size: 1.4rem;
-        border-radius: 10px;
-        color: black;
-        text-shadow: 2px 2px 4px #000000;
-        font-weight: bolder;
-        background-color: rgba(255, 255, 255, 0.507);
-        padding: 2rem;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s ease-in-out;
-        height: 200px;
-
-    }
-
-    .parallax h2 {
-        font-size: 2rem;
-        color: rgb(0, 0, 0);
-        text-shadow: 2px 2px 4px #000000;
-        font-style: italic;
-        position: relative;
-        top: 30%;
-        left: -76%;
-        width: 80%;
-
-    }
-
-
-    .parallax p:hover {
-        background-color: rgba(0, 0, 0, 0.507);
-        padding: 3rem;
-        color: wheat;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s;
-    }
-}
-
-
-@media screen and (max-width: 1978px) {
-
-    .parallax {
-        background-image: url("https://static.actugaming.net/media/2023/08/granblue-fantasy-relink-screenshot-22-08-202301.jpg");
-        height: 1300px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-image: fill 0 linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        transition: opacity 1s ease-in-out;
-
-    }
-
-    .parallax div {
-        padding: 1rem;
-        text-align: center;
-        font-size: 20px;
-        color: white;
-        margin: auto;
-        display: inline-flex;
-    }
-
-    .parallax img {
-        transition: transform 0.5s;
-        position: relative;
-        animation: slide 5s ease-in-out infinite;
-        animation-delay: 2s;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        left: 90%;
-        width: 15%;
-        height: 20%;
-
-    }
-
-    @keyframes slide {
-
-        0%,
-        100% {
-            top: 0;
-        }
-
-        50% {
-            top: 10%;
-        }
-    }
-
-    .parallax {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .parallax p {
-        font-size: 1.4rem;
-        border-radius: 10px;
-        color: black;
-        text-shadow: 2px 2px 4px #000000;
-        font-weight: bolder;
-        background-color: rgba(206, 179, 179, 0.507);
-        padding: 2rem;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s ease-in-out;
-        height: 200px;
-
-    }
-
-    .parallax h2 {
-        font-size: 2rem;
-        color: rgb(0, 0, 0);
-        text-shadow: 2px 2px 4px #000000;
-        font-style: italic;
-        position: relative;
-        top: 30%;
-        left: -76%;
-        width: 80%;
-
-    }
-
-
-    .parallax p:hover {
-        background-color: rgba(0, 0, 0, 0.507);
-        padding: 3rem;
-        color: wheat;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s;
-    }
-}
-
-
-@media screen and (max-width: 1186px) {
-
-    .parallax {
-        background-image: url("https://static.actugaming.net/media/2023/08/granblue-fantasy-relink-screenshot-22-08-202301.jpg");
-        height: 1300px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-image: fill 0 linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        transition: opacity 1s ease-in-out;
-
-    }
-
-    .parallax div {
-        padding: 1rem;
-        text-align: center;
-        font-size: 20px;
-        color: white;
-        margin: auto;
-        display: inline-flex;
-    }
-
-    .parallax img {
-        transition: transform 0.5s;
-        position: relative;
-        animation: slide 5s ease-in-out infinite;
-        animation-delay: 2s;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        left: 90%;
-        width: 15%;
-        height: 20%;
-
-    }
-
-    @keyframes slide {
-
-        0%,
-        100% {
-            top: 0;
-        }
-
-        50% {
-            top: 10%;
-        }
-    }
-
-    .parallax {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .parallax p {
-        font-size: 1rem;
-        border-radius: 10px;
-        color: black;
-        text-shadow: 2px 2px 4px #000000;
-        font-weight: bolder;
-        background-color: rgba(206, 179, 179, 0.507);
-        padding: 2rem;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s ease-in-out;
-        height: 220px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 30%;
-
-    }
-
-    .parallax h2 {
-        font-size: 2rem;
-        color: rgb(0, 0, 0);
-        text-shadow: 2px 2px 4px #000000;
-        font-style: italic;
-        position: relative;
-        top: 30%;
-        left: -76%;
-        width: 80%;
-
-    }
-
-
-    .parallax p:hover {
-        background-color: rgba(0, 0, 0, 0.507);
-        padding: 3rem;
-        color: wheat;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s;
+        width: 60px;
     }
 }
 </style>

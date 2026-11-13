@@ -4,28 +4,23 @@ body {
   padding: 0;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
-  font-weight:lighter;
+  font-weight: lighter;
   font-style: normal;
   overflow-x: hidden;
   cursor: url('./assets/img/cursor.png'), auto;
 }
 
-/*nav{
-  background-color: black;
-  color: aliceblue;
-  width: 100%;
-  
-}*/
 .foto {
-  width: 1366px;
-  height: 768px;
+  width: 100%;
+  max-width: 1366px;
+  height: auto;
+  aspect-ratio: 1366 / 768;
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: auto;
-
 }
 
 .foto>img {
@@ -38,14 +33,11 @@ body {
   font-size: 1.9em;
 }
 
-.botones {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  z-index: 1;
-  margin: auto;
-  
+.imgvas {
+  max-width: 50%;
+  height: auto;
 }
+
 .botones {
   display: flex;
   align-items: flex-start;
@@ -54,8 +46,6 @@ body {
   margin: auto;
   width: 100%;
   flex-wrap: wrap;
-
-
 }
 
 .sticky {
@@ -72,11 +62,10 @@ body {
   align-items: flex-start;
   justify-content: space-evenly;
   width: 100%;
-
   box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
-
 }
-a{
+
+a {
   text-decoration: none;
   color: #000;
   font-size: 1.5em;
@@ -88,17 +77,17 @@ a{
   text-align: center;
   transition: all 0.3s ease;
 }
-a:hover{
+
+a:hover {
   color: #fcfcfc;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-  
-  
-
 }
-b{
+
+b {
   transition: all 0.3s ease;
 }
-b:hover{
+
+b:hover {
   padding: 0.5em;
   background: linear-gradient(270deg, #1fdfec, #c205053d, #7895d1, #268f8f);
   border-radius: 10px;
@@ -109,99 +98,61 @@ b:hover{
   -o-animation: FondoGradianteButtons 12s ease infinite;
   animation: FondoGradianteButtons 12s ease infinite;
   box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
-
 }
+
 @-webkit-keyframes FondoGradianteButtons {
-  0% {
-    background-position: 51% 0%
-  }
-
-  50% {
-    background-position: 50% 100%
-  }
-
-  100% {
-    background-position: 51% 0%
-  }
+  0% { background-position: 51% 0% }
+  50% { background-position: 50% 100% }
+  100% { background-position: 51% 0% }
 }
 
 @-moz-keyframes FondoGradianteButtons {
-  0% {
-    background-position: 51% 0%
-  }
-
-  50% {
-    background-position: 50% 100%
-  }
-
-  100% {
-    background-position: 51% 0%
-  }
+  0% { background-position: 51% 0% }
+  50% { background-position: 50% 100% }
+  100% { background-position: 51% 0% }
 }
 
 @-o-keyframes FondoGradianteButtons {
-  0% {
-    background-position: 51% 0%
-  }
-
-  50% {
-    background-position: 50% 100%
-  }
-
-  100% {
-    background-position: 51% 0%
-  }
+  0% { background-position: 51% 0% }
+  50% { background-position: 50% 100% }
+  100% { background-position: 51% 0% }
 }
 
 @keyframes FondoGradianteButtons {
-  0% {
-    background-position: 51% 0%
-  }
-
-  50% {
-    background-position: 50% 100%
-  }
-
-  100% {
-    background-position: 51% 0%
-  }
+  0% { background-position: 51% 0% }
+  50% { background-position: 50% 100% }
+  100% { background-position: 51% 0% }
 }
 
-
-em,small{
+em,
+small {
   text-align: center;
   display: block;
   font-size: 20px;
 }
-
-
-
-
 
 .grynoth {
   width: 200%;
   margin: auto;
   display: flex;
   border-radius: 20%;
-
-
-  
 }
-.tdinfoV{
+
+.tdinfoV {
   width: 50%;
 }
-h2{
+
+h2 {
   text-align: center;
   font-weight: lighter;
   font-size: 2em;
 }
-h1{
+
+h1 {
   text-align: center;
   font-weight: lighter;
-  font-size:4em;
+  font-size: 4em;
 }
-
-
 
 .tdsVase {
   text-align: right;
@@ -226,7 +177,6 @@ div.table-title {
   text-align: center;
 }
 
-
 /*** Table Styles **/
 
 .table-fill {
@@ -240,7 +190,6 @@ div.table-title {
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
-  
 }
 
 th {
@@ -274,8 +223,6 @@ tr {
   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
 
-
-
 tr:first-child {
   border-top: none;
 }
@@ -283,10 +230,6 @@ tr:first-child {
 tr:last-child {
   border-bottom: none;
 }
-
-
-
-
 
 tr:last-child td:first-child {
   border-bottom-left-radius: 3px;
@@ -311,42 +254,21 @@ td:last-child {
   border-right: 0px;
 }
 
-th.text-left {
-  text-align: left;
-}
+th.text-left { text-align: left; }
+th.text-center { text-align: center; }
+th.text-right { text-align: right; }
+td.text-left { text-align: left; }
+td.text-center { text-align: center; }
+td.text-right { text-align: right; }
 
-th.text-center {
-  text-align: center;
-}
-
-th.text-right {
-  text-align: right;
-}
-
-td.text-left {
-  text-align: left;
-}
-
-td.text-center {
-  text-align: center;
-}
-
-td.text-right {
-  text-align: right;
-}
-
-.container-elements{
+.container-elements {
   display: flex;
 }
 
-/*.brd-img{
-  border-image: fill 0 linear-gradient(#0003, #0000);
-}*/
 .gradiante {
-  height: 1400px;
+  height: auto;
   background: linear-gradient(219deg, #76d6db, #ffffff, #e3e2f2);
   background-size: 600% 600%;
-
   -webkit-animation: FondoGradiante 9s ease infinite;
   -moz-animation: FondoGradiante 9s ease infinite;
   -o-animation: FondoGradiante 9s ease infinite;
@@ -354,77 +276,123 @@ td.text-right {
 }
 
 @-webkit-keyframes FondoGradiante {
-  0% {
-    background-position: 51% 0%
-  }
-
-  50% {
-    background-position: 50% 100%
-  }
-
-  100% {
-    background-position: 51% 0%
-  }
+  0% { background-position: 51% 0% }
+  50% { background-position: 50% 100% }
+  100% { background-position: 51% 0% }
 }
 
 @-moz-keyframes FondoGradiante {
-  0% {
-    background-position: 51% 0%
-  }
-
-  50% {
-    background-position: 50% 100%
-  }
-
-  100% {
-    background-position: 51% 0%
-  }
+  0% { background-position: 51% 0% }
+  50% { background-position: 50% 100% }
+  100% { background-position: 51% 0% }
 }
 
 @-o-keyframes FondoGradiante {
-  0% {
-    background-position: 51% 0%
-  }
-
-  50% {
-    background-position: 50% 100%
-  }
-
-  100% {
-    background-position: 51% 0%
-  }
+  0% { background-position: 51% 0% }
+  50% { background-position: 50% 100% }
+  100% { background-position: 51% 0% }
 }
 
 @keyframes FondoGradiante {
-  0% {
-    background-position: 51% 0%
-  }
-
-  50% {
-    background-position: 50% 100%
-  }
-
-  100% {
-    background-position: 51% 0%
-  }
+  0% { background-position: 51% 0% }
+  50% { background-position: 50% 100% }
+  100% { background-position: 51% 0% }
 }
-
 
 .my-element {
   display: inline-block;
   margin: 0 0.5rem;
-
-  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
+  animation: fadeIn;
+  animation-duration: 2s;
 }
 
 .animate__animated.animate__fadeIn {
   --animate-duration: 6s;
-  
 }
 
-/* This changes all the animations globally */
 :root {
   --animate-duration: 800ms;
   --animate-delay: 0.9s;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+  .txtVa {
+    width: 90%;
+    font-size: 1.3em;
+  }
+
+  .imgvas {
+    max-width: 90%;
+  }
+
+  /* las cajas de cada personaje pasan a columna */
+  div[class$="Info"] {
+    flex-direction: column !important;
+  }
+
+  .weapon {
+    width: 100% !important;
+    max-width: 100%;
+    display: block;
+  }
+
+  .button-stats,
+  .button-weapon {
+    box-sizing: border-box;
+    width: calc(100% - 2em) !important;
+  }
+
+  .table-fill {
+    height: auto;
+  }
+
+  h1 { font-size: 2.8em; }
+  h2 { font-size: 1.6em; }
+}
+
+/* Móvil */
+@media screen and (max-width: 768px) {
+  .txtVa {
+    font-size: 1.1em;
+  }
+
+  .sticky {
+    padding: 8px 0;
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+
+  .botones a {
+    font-size: 1em;
+  }
+
+  .botones h2 {
+    font-size: 1rem;
+    margin: 0.4em 0;
+  }
+
+  h1 { font-size: 2.2em; }
+  h2 { font-size: 1.4em; }
+
+  th {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .tdinfoV {
+    width: 60%;
+  }
+
+  em,
+  small {
+    font-size: 14px;
+  }
 }

@@ -36,7 +36,7 @@
                         <hr />
                     </div>
                     <div class="conatiner-button-delete">
-                        <button class="button-delete" @click="Eliminar(index)">Delete</button>
+                        <button class="button-delete" @click="Eliminar">Delete</button>
                         <button class="button-clear" @click="clearResults">Clear Results</button>
                     </div>
 
@@ -60,12 +60,6 @@
 
 <script setup>
 import { ref } from 'vue';
-
-
-
-
-
-
 
 //PRUEBA
 
@@ -218,10 +212,13 @@ const noMore = ref('');
 
 const clearResults = () => {
     foundProducts.value = [];
+    noMore.value = '';
 };
 
-const Eliminar = (index) => {
-    foundProducts.value.splice(index, 1);
+// Elimina al último miembro añadido al equipo
+const Eliminar = () => {
+    foundProducts.value.pop();
+    noMore.value = '';
 };
 
 const searchProduct = () => {
@@ -243,13 +240,19 @@ const searchProduct = () => {
 
 <!--estilos solo para funciones-->
 <style scoped >
+section {
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
 conatiner-button-delete {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+
+
 }
+
 .button-delete,
 .button-clear {
     padding: 1em;
@@ -268,16 +271,22 @@ conatiner-button-delete {
     transition: all .3s ease;
     background: linear-gradient(270deg, #f303df3b, #c205053d, #7896d149, #268f8f3d);
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
-    
+
 
 }
 
 .product-info {
     display: inline-block;
     margin: auto;
-
+    flex: 1 1 220px;
+    max-width: 100%;
 }
 
+.product-photo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+}
 
 h4 {
     text-align: center;
@@ -292,6 +301,7 @@ h4 {
 }
 
 input {
+    box-sizing: border-box;
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -315,12 +325,27 @@ input {
 
 .container-teambuilder {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
 }
+
+@media screen and (max-width: 768px) {
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    .container-teambuilder h2 {
+        font-size: 1.2rem;
+    }
+
+    .product-info {
+        flex: 1 1 100%;
+    }
+}
 </style>
-
-
-
-

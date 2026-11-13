@@ -11,7 +11,7 @@
 
     </div>
 </template>
-  
+
 <script setup>
 import { ref } from 'vue';
 
@@ -37,20 +37,20 @@ const prev = () => {
 
 
 </script>
-  
+
 <style scoped>
 .carousel {
     display: inline-flex;
     margin: auto;
     position: relative;
-    left: 1%;
+    left: 2%;
+    max-width: 100%;
 }
 
-
 .photo {
-    width: 100%;
+    width: 130%;
     border-radius: 10px;
-    box-shadow: 0 20px 120px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 20px 20px 30px 0 rgba(0, 0, 0, 0.5);
 }
 
 .carousel-item {
@@ -66,8 +66,7 @@ const prev = () => {
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 100%;
-
+    width: 130%;
 }
 
 .button-container button {
@@ -75,10 +74,9 @@ const prev = () => {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #f1f1f1;
     cursor: pointer;
     background: none;
-
+    font-size: 1.5rem;
 }
 
 .button-container button:hover {
@@ -88,80 +86,31 @@ const prev = () => {
     transition: 0.5s;
 }
 
-@media screen and (max-width: 768px) {
-    .carrousel {
-        display: none
-    }
-
-    .photo {
-        display: none;
-    }
-
-    .button-container button {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .carrousel {
-        display: none
-    }
-
-    .photo {
-        display: none;
-    }
-
-    .button-container button {
-        display: none;
-    }
-}
-
-
-@media screen and (max-width: 1920px) and (max-height: 1080px) {
+/* Tablet y móvil */
+@media screen and (max-width: 1186px) {
     .carousel {
-        display: inline-flex;
-        margin: auto;
-        position: relative;
-        left: 2%;
-    }
-
-    .photo {
-        width: 130%;
-        border-radius: 10px;
-        box-shadow: 20px 20px 30px 0 rgba(0, 0, 0, 0.5);
-    }
-
-    .carousel-item {
-        display: none;
+        display: block;
+        left: 0;
+        width: 100%;
     }
 
     .carousel-item.active {
-        display: block;
+        width: 100%;
+    }
+
+    .photo {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .button-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        width: 130%;
+        width: 100%;
     }
 
     .button-container button {
-        margin: 0 10px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        background-color: #f1f1f1;
-        cursor: pointer;
-        background: none;
-        font-size: 1.5rem;
+        font-size: 1rem;
+        padding: 8px 14px;
     }
-
-    .button-container button:hover {
-        background-color: rgba(0, 0, 0, 0.507);
-        color: wheat;
-        box-shadow: 2px 30px 40px #000000;
-        transition: 0.5s;
-    }
-}</style>
+}
+</style>

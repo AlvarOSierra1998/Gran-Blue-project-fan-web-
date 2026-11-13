@@ -6,8 +6,7 @@
           <img class="animate__animated animate__fadeIn" src="./assets/Gbf_relink_logo-HD.png" alt="Imagen">
         </div>
         <div style="overflow: hidden;">
-          <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
-            style="fill: #ffffff; width: 101%; height: 632px; transform: rotate(180deg);">
+          <svg class="wave" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
               opacity=".25" />
@@ -21,19 +20,18 @@
       </section>
 
       <!--MAIN-->
-     
+
       <section>
         <parallax />
       </section>
       <section>
         <characters />
       </section>
-    
+
       <section>
         <teamBuilder />
       </section>
 
-      
     </main>
     <footer>
       <p>© 2024 Granblue Fantasy Relink</p>
@@ -41,7 +39,7 @@
 
         <li class="tooltip">
           <span class="tooltiptext">OficialWebsite</span>
-          <a href="https://relink.granbluefantasy.jp/en/" target="_blank" rel="noopener noreferrer</a>">
+          <a href="https://relink.granbluefantasy.jp/en/" target="_blank" rel="noopener noreferrer">
             <img
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC/ElEQVR4AbzOA2xgCRRA0d1ybdu2bdse27Zt27Zt27Ztm39Pk99kjLYzNznxwxUJ6DEq8yWXtdvJS3v+4WouW0/Sm30UJ4a4ookg0V15jkVPMIyAnWQgrodIyTUkulj+ITu/8ilv8RujCdhHFq7lJbrwJycWy/XcyR1EcMG9yAAOsJOt7CYIHaAjzVlKQG9+5X2K0YaW1ONjIrionmcxAbsYxlIOEJxgF6vYzs5QwHFKcRcRJKiCHGYFNUnLDg6yh4D+fM5bZGYRxwhYT15iSFB3kJPX+JNJ9OFvvqM1JfiHGOJ6niYcI2ALH5Kg3iEjpVlMUe4kkrhu5gO+4Fri+4l9BBwjMwnqKWazi3Hcy998w4ldQwTxFSEIHSUDF9Rt3Eh819GdnLzOjeTlL87WI8whCO2hC49y3p6mEA8R142U4hGe5Tay8Qtn62u2E4Qq8wfhnvP3PuV5mriu4VfWMZS+fEZ8N/EkN/IPCwlC43mMuJ7jZS6oN6jNR8T1DXsJ2M6rXMsHpOU/0jCLIDSCV7joHuchPmcE2fiOHQTspgS5SU0a/iUti9hAJe4nQT1PKZqGUtCd9eykNyl4iDv4hqpsoh2vEEWiupF3aEpZvudjfqIuZalNVl7jO/rQiQdJkq4jHwupwh9cw/vkYx3HWEd9PqESvXmMRBXBx1SiEL/xOK+TnZt5nQJMJWAR6ShLa24lUUUSwZ2MoA8zqE8s8d1Hefaxi4JUoRiRJLo7WUAQakY0JxZNdvayk9y04dOkemDeOR+QoinNMTawki5ck9QPNCWKM3UL/QlCO/iURHU3iwhCHYjlbH3CVoJQS2K46CL5kBqsZ3doKaV5gTMVTSOC0BY+SugDb/MzX5zgS37hWc7WG2wgCHXjek4tlt94gyQtijoEocPkJ4oTe4nuNOV5krRnmcchprOZcjzFTdxFTdJThGwkeT+ylIoUZyozGcBQ6vAqbfmIS9KX9Kcuf/I7//Ed39CSrERxyXqQ3NTlS96hIU35f4Gwgg0AvPToeVjyYdUAAAAASUVORK5CYII="
               title="Oficial Website" alt="Oficial WebSite">
@@ -75,22 +73,30 @@
     </footer>
   </body>
 </template>
-      
+
 <script setup>
 import characters from './components/characters.vue';
 import teamBuilder from './components/teamBuilder.vue';
 import parallax from './components/parallax.vue';
 import carrousel from './components/carrousell.vue';
-
-
 </script>
-      
+
 <style scoped >
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-.linkedin{
-  width: 6.7%;
+.wave {
+  display: block;
+  fill: #ffffff;
+  width: 101%;
+  height: clamp(120px, 46vw, 632px);
+  transform: rotate(180deg);
 }
+
+.linkedin {
+  width: 32px;
+  height: 32px;
+}
+
 .marquee {
   width: 100%;
   overflow: hidden;
@@ -123,7 +129,7 @@ import carrousel from './components/carrousell.vue';
   cursor: pointer;
 }
 
-.tooltip .tooltiptext  {
+.tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
   background-color: #555;
@@ -135,21 +141,19 @@ import carrousel from './components/carrousell.vue';
   position: absolute;
   z-index: 1;
   left: 100%;
-  /* Position the tooltip to the right of the text */
   top: 50%;
   margin-top: -30px;
-  /* Use half of the height to center the tooltip vertically */
 
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-/*COMPROBAR*/
-.tooltip:hover .tooltiptext  {
+.tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
-.tooltiptextLinkedin{
+
+.tooltiptextLinkedin {
   background-color: #555;
   color: #fff;
   text-align: center;
@@ -160,20 +164,22 @@ import carrousel from './components/carrousell.vue';
   z-index: 1;
   left: 7%;
   padding: 1%;
-  /* Position the tooltip to the right of the text */
   top: 50%;
   margin-top: -30px;
-  /* Use half of the height to center the tooltip vertically */
 
   opacity: 0;
   transition: opacity 0.3s;
 }
-.tooltip:hover .tooltiptextLinkedin  {
+
+.tooltip:hover .tooltiptextLinkedin {
   visibility: visible;
   opacity: 1;
 }
 
-
+@media screen and (max-width: 768px) {
+  .tooltiptextLinkedin {
+    left: 100%;
+    padding: 5px 8px;
+  }
+}
 </style>
-
-

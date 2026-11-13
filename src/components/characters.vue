@@ -686,7 +686,7 @@
         <!--lista perosnajes-->
         <div>
             <!---es una clase el vaseraga info-->
-            <div v-if="mostrarInfoEugen" :class="{ RackamInfo: mostrarInfoEugen }">
+            <div v-if="mostrarInfoEugen" :class="{ EugenInfo: mostrarInfoEugen }">
                 <img class="imgvas" src="../assets/eugen.png" alt="Eugen">
                 <blockquote class="txtVa">
                     <p>
@@ -700,7 +700,7 @@
                     </p>
                     <!---Stats--->
                     <button class="button-stats" @click="statsEugen">Stats</button>
-                    <ul class="stats-fondo-eugen" v-if="estadisticasInfoRackam">
+                    <ul class="stats-fondo-eugen" v-if="estadisticasInfoEugen">
                         <li>HP(lvl 100 ): <b class="values-eugen">77542</b></li>
                         <li>ATK (lvl 100) : <b class="values-eugen"> 79062 </b></li>
                         <li>Element: <img
@@ -710,7 +710,7 @@
                     <!---WEAPON-->
                     <button class="button-stats" @click="pistolaEugen">Weapon</button>
                     <!---Pistola-->
-                    <div v-if="pistola">
+                    <div v-if="pistolaE">
                         <div class="table-title">
                             <h2><i>Dreyse</i></h2>
                         </div>
